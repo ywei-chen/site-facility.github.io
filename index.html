@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>場地首頁</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script src="https://kit.fontawesome.com/d78a2080e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Nav of Header -->
+    <header>
+        <div class="logo-nav">
+            <span class="logo">LOGO</span>
+            <span class="logo-text">羽毛球｜選擇自己最適合的</span> 
+        </div>
+        <div class="text-nav">
+            <ul class="nav-bar">
+                <li><a href="http://127.0.0.1:5500/register.html" target="_blank">登入/註冊</a></li>
+                <li><a href="#" target="_blank">運動場地</a></li>
+                <li><a href="#" target="_blank">關於我們</a></li>
+                <li><a href="#" target="_blank">聯絡我們</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- End of Nav of Header -->
+    <main>
+        <!-- Search Bar-->
+        <section class="search-bar">
+                <div class="dropdown location">
+                    <i class="fa-solid fa-location-dot fa-xl" style="color: #F05C34"></i>
+                    <select name="location city" id="dropdownLocation">
+                        <option style="display:none">城市區域</option>
+                        <option value="台南">台南</option>
+                        <option value="高雄">高雄</option>
+                    </select>
+                </div>
+                <div class="dropdown badminton">
+                    <i class="fa-solid fa-house fa-xl" style="color: #F05C34;"></i>
+                    <select name="location badminton" id="dropdownCourt">
+                        <option style="display:none">球館名稱</option>
+                        <option value="1">優勢羽球館</option>
+                        <option value="2">勁拍羽球館</option>
+                        <option value="3">超強羽球館</option>
+                        <option value="4">羽利羽球館</option>
+
+                    </select>
+                </div>
+                <button class="searchBtn" type="submit">搜尋</button>
+        </section>
+        <!-- End of Search Bar-->
+        <hr>
+        <!-- Pocture section -->
+        <section class="metalandword">
+            <div class="metal-icon">
+                <i class="fa-solid fa-medal fa-2xl" style="color: #1f1a1ade;"></i>
+            </div>
+            <div class="metal-word">百分百好評球館</div>
+        </section>
+        <section class="image-setting">
+            <div class="card">
+                <img src="優勢羽球館.jpg" alt="" class= "card-image">
+                <h3 class="img-title">優勢羽球館</h3>
+            </div>
+            <div class="card">
+                <img src="神力羽球館.jpg" alt="" class="card-image">
+                <h3 class="img-title">神力羽球館</h3>
+            </div>
+            <div class="card">
+                <img src="羽立羽球館.jpg" alt="" class="card-image">
+                <h3 class="img-title">勁拍羽球館</h3>
+            </div>
+        </section>
+        <!-- Pocture section -->
+    </main>
+    <script>
+        var sLocation = {
+            '台南' : ['勁拍羽球館','超強羽球館'],
+            '高雄' : ['優勢羽球館','羽利羽球館']
+        };
+
+        document.getElementById("dropdownLocation").addEventListener("change", function(){
+            var loc = this.value;
+            let sCourt = document.getElementById("dropdownCourt");
+
+            while(sCourt.options.length > 1){
+                sCourt.remove(1);
+            }
+
+            sLocation[loc].forEach(function(element) {
+                var newOption = document.createElement("option");
+                newOption.value = element;
+                newOption.text = element;
+                sCourt.add(newOption);
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
