@@ -7,10 +7,6 @@ html, body {
     letter-spacing: 0.5ch;
 }
 
-body  {
-    letter-spacing: 5px;
-}
-
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         display: flex;
@@ -36,4 +32,47 @@ body  {
     width: 100%;
     background-position: center;
     background-size:cover;
+}
+
+.hotspot-1, .hotspot-2, .hotspot-3 {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    height: 250px;
+    text-decoration: none;
+    color: #c0b283;
+    background-color: transparent;
+    transition: transform .75s;
+}
+
+.hotspot-1 {
+    background-image: url(Pics/優勢羽球館.jpg);
+}
+
+.hotspot-1:hover {
+    transform: scale(1.15);
+}
+
+.hotspot-2 {
+    background-image: url(Pics/神力羽球館.jpg);
+}
+
+.hotspot-2:hover {
+    transform: scale(1.15);
+}
+
+.hotspot-3 {
+    background-image: url(Pics/羽立羽球館.jpg);
+}
+
+.hotspot-3:hover {
+    transform: scale(1.15);
+}
+
+
+.h4 {
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
+    text-shadow: 2px 2px 9px rgba(0,0,0, .5);
 }
