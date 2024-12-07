@@ -3,8 +3,9 @@ html, body {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    background-color: #c2c6cb;
+    background-color:whitesmoke;
     letter-spacing: 0.5ch;
+    font-size: .875rem;
 }
 
 @media (min-width: 992px) {
@@ -34,7 +35,7 @@ html, body {
     background-size:cover;
 }
 
-.hotspot-1, .hotspot-2, .hotspot-3 {
+.hotspot-1, .hotspot-2, .hotspot-3, .hotspot-4 {
     position: relative;
     background-size: cover;
     background-position: 50%;
@@ -69,10 +70,21 @@ html, body {
     transform: scale(1.15);
 }
 
+.hotspot-4 {
+    background-image: url(Pics/超強羽球館.jpg);
+}
+
+.hotspot-4:hover {
+    transform: scale(1.15);
+}
 
 .h4 {
     position: absolute;
     left: 30px;
     bottom: 15px;
     text-shadow: 2px 2px 9px rgba(0,0,0, .5);
+}
+
+#dropdownLocation, #dropdownCourt {
+    width: 200px;
 }
