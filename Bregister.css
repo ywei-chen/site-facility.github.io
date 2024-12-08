@@ -8,15 +8,11 @@ html, body {
     font-size: .875rem;
 }
 
-.logoFocus {
-    background-image:url(Pics/FocusLogo.png);
+.signBox {
+    min-width: 300px;
 }
 
-
-
-
-
-.sandBox {
+button {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 330px;
 }
