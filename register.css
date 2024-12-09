@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     letter-spacing: 0.5ch;
     font-size: .875rem;
 }
